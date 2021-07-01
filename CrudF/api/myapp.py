@@ -16,42 +16,29 @@ def get_data(id=None):
     data=r.json() # converting get response to json
     print(data)
 
-
-# get_data()
+# get_data(2)
 
 # for update data
-def Partial_update_data():
-    data={
-        'id':1,
-        'name':'love',
-        'age': 30,
 
-    }
-    json_data=json.dumps(data)
-    r=requests.patch(url=URL,data=json_data)
-    print(r.json())
-
-# Partial_update_data()
 
 # complter update
 def complete_update_data():
     data={
-        'id':1,
+        'id':17,
         'name':'to',
-        'age': 143,
-        'email':'love@you.com'
+        'age':1,
 
+        'email':'ok@k.com'
     }
     json_data=json.dumps(data)
     r=requests.put(url=URL,data=json_data)
-#     print(r.json())
-# complete_update_data()
-
+    print(r.json())
+complete_update_data()
 
 # delete data
 def delete_data():
     data={
-        'id':1,
+        'id':2,
 
     }
     json_data=json.dumps(data)
@@ -61,7 +48,10 @@ def delete_data():
 
 
 
+
 # for POST
+
+
 def post_data():
     data={
 
@@ -74,21 +64,11 @@ def post_data():
     r=requests.post(url=URL,data=json_data)
     print(r.json())
 
-post_data()
 
 
 
 
 
 
-# data={
-#     'name':'love',
-#     'age':2,
-#     'email':'ashish@gmail.com'
-#
-# }
-#
-# json_data=json.dumps(data) # for conversion in json
-# r=requests.post(url=URL,data=json_data)# for sending data
-# data=r.json()# for getting response is given by webappicatuion
-# print(data)
+
+
